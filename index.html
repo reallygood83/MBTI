@@ -5,25 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MBTI 성향 테스트</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f7faff; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; text-align: center; }
-        h2 { text-align: center; font-size: 2rem; color: #5a6e84; }
-        .question { background-color: #ffffff; padding: 20px; margin-bottom: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-        .question p { font-size: 1.5rem; color: #4d90fe; line-height: 1.6; }
-        button { padding: 12px 24px; font-size: 16px; cursor: pointer; border: none; border-radius: 8px; margin: 10px; background-color: #e1ecff; transition: background-color 0.3s; }
-        button:hover { background-color: #c9d8f1; }
-        .selected { background-color: #c9d8f1; }
-        #result { background-color: #e8f4ff; padding: 20px; border-radius: 10px; margin-top: 30px; text-align: center; }
-        .btn-container { display: flex; justify-content: space-around; }
-        .btn-container button:disabled { background-color: #dcdcdc; cursor: not-allowed; }
-        .character-image { margin-top: 30px; width: 150px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-        .copy-btn { padding: 10px 20px; font-size: 16px; cursor: pointer; margin-top: 20px; background-color: #c9d8f1; border: none; border-radius: 8px; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7faff;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #5a6e84;
+        }
+        .question {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .question p {
+            font-size: 1.5rem;
+            color: #4d90fe;
+            line-height: 1.6;
+        }
+        .character-image {
+            display: block;
+            margin: 30px auto;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #e1ecff;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #c9d8f1;
+        }
+        .selected {
+            background-color: #c9d8f1;
+        }
+        #result {
+            background-color: #e8f4ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .copy-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            background-color: #c9d8f1;
+            border: none;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <h2>MBTI 성향 테스트 🎉</h2>
-    <img src="https://via.placeholder.com/150/8F6C4A/ffffff?text=Character" alt="캐릭터 이미지" class="character-image">
+    <img src="./images/character.png" alt="캐릭터 이미지" class="character-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/300/8F6C4A/ffffff?text=No+Image';">
     <div id="test"></div>
     <div id="result"></div>
 </div>
